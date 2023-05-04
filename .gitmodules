@@ -1,0 +1,3 @@
+[submodule "components/jrg"]
+	path = components/jrg
+	url = https://github.com/JamesonRGrieve/JRG-React-Components
