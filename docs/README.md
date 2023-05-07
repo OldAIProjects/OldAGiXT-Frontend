@@ -39,6 +39,8 @@ docker run -it --pull always -p 80:3000 -e NEXT_PUBLIC_API_URI=http://$(ifconfig
 docker run -it --pull always -p 80:3000 -e NEXT_PUBLIC_API_URI=http://$(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -ne "Loopback Pseudo-Interface 1" -and $_.AddressFamily -eq "IPv4" } | Select-Object -ExpandProperty IPAddress)`:7437 ghcr.io/jamesonrgrieve/agent-llm-frontend:main
 ```
 
+Access at http://localhost
+
 ### Alternatively, you can run the front end locally:
 
 Run the following commands from within your Agent-LLM folder.
@@ -49,6 +51,8 @@ cd Agent-LLM-Frontend
 yarn install
 yarn dev
 ```
+
+Access at http://localhost:3000
 
 ## Contributing
 
