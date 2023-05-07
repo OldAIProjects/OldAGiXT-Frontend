@@ -27,6 +27,20 @@ Agent-LLM is an Artificial Intelligence Automation Platform designed to power ef
 
 ## Front-End Quickstart
 
+After you have run the Agent-LLM back end, follow these instructions below:
+
+### Linux or MacOS:
+```
+docker run -it --pull always -p 80:3000 -e NEXT_PUBLIC_API_URI=http://$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')':7437 ghcr.io/jamesonrgrieve/agent-llm-frontend:main
+```
+
+### Windows:
+```
+docker run -it --pull always -p 80:3000 -e NEXT_PUBLIC_API_URI=http://$(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -ne "Loopback Pseudo-Interface 1" -and $_.AddressFamily -eq "IPv4" } | Select-Object -ExpandProperty IPAddress)`:7437 ghcr.io/jamesonrgrieve/agent-llm-frontend:main
+```
+
+### Alternatively, you can run the front end locally:
+
 Run the following commands from within your Agent-LLM folder.
 
 ```
