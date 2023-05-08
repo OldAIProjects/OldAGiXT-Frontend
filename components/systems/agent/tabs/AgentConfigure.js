@@ -209,6 +209,16 @@ export default function AgentAdmin() {
       <Typography variant="h6" sx={{ my: "1rem" }}>
         Agent Provider
       </Typography>
+      <Typography variant="body1" sx={{ my: "1rem" }}>
+        <b>
+          <a
+            href="https://github.com/Josh-XT/Agent-LLM/tree/main/docs/providers"
+            target="_blank"
+          >
+            CLICK HERE FOR PROVIDER DOCUMENTATION
+          </a>
+        </b>
+      </Typography>
       <Select
         label="Provider"
         sx={{ mx: "0.5rem", display: "block" }} // Add 'display: "block"' here
