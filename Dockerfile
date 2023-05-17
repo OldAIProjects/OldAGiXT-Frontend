@@ -1,4 +1,4 @@
-# Get deps
+# Get dep
 FROM --platform=linux/arm64 node:14-alpine AS deps
 WORKDIR /deps
 COPY package.json yarn.lock ./
