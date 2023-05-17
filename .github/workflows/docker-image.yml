@@ -14,7 +14,7 @@ permissions:
 jobs:
 
   build-frontend:
-    uses: localagi/ai-dedicated-workflows/.github/workflows/operation-docker-build-publish.yml@main
+    uses: localagi/ai-dedicated-workflows/.github/workflows/operation-docker-build-publish.yml@v1
     with:
       registry-dockerhub-enable: false
       push: ${{ github.event_name != 'pull_request' }}
