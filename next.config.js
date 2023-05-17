@@ -15,7 +15,7 @@ const nextConfig = {
     concurrentFeatures: 10,
 
   },
-
+  "staticPageGenerationTimeout": 120,
 };
 
 module.exports = nextConfig;
