@@ -2,6 +2,8 @@
 FROM node:14-alpine AS deps
 WORKDIR /deps
 COPY package.json yarn.lock ./
+RUN yarn config set registry https://registry.npmjs.org/
+RUN yarn config set network-timeout 1200000
 RUN yarn install --frozen-lockfile
 
 # Build the Next.js app
